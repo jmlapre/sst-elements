@@ -183,7 +183,7 @@ OperatingSystem::startThread(Thread* t)
             stack,
             StackAlloc::stacksize(),
             parent->globalsStorage(),
-            nullptr);
+            parent->newTlsStorage());
     }
   running_threads_[t->tid()] = t;
 }
